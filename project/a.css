@@ -1,0 +1,44 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url(wallpaper.jpg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.sign{
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 30px 40px;
+    color: white;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    
+}
+.text input{
+    border-radius: 20px;
+    height: 35px;
+    width:250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,0.2);
+    padding: 10px 45px 10px 10px;
+    color: white;
+}
+.text input::placeholder{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sign .btn{
+    border-radius: 20px;
+    height: 35px;
+    width:250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    outline: none; 
+}

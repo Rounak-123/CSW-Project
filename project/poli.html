@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More with Multiple Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .content {
+            overflow: hidden;
+            height: 60px; /* Limit the height */
+            transition: height 0.3s ease;
+        }
+        .content.expanded {
+            height: auto; /* Full content when expanded */
+        }
+    </style>
+</head>
+<body >
+    <div style="background-color: rgb(4, 41, 53);">
+        <h2 style=" color: white ; text-align: center;">Pollitics in India</h2>
+    
+        
+      </div>
+    <div class="container mt-4">
+        
+
+        <!-- Repeated Content Sections -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">How does Indian parliament works ?</h5>
+                <div class="content">
+                    The Indian Parliament is the supreme legislative body of the country. It consists of two houses: the Lok Sabha (House of the People) and the Rajya Sabha (Council of States). The Lok Sabha members are directly elected by the people, while Rajya Sabha members are elected by state legislatures. The Parliament frames laws, controls finances, and oversees the executive. It also elects the President and Vice President. The President summons and prorogues Parliament sessions and can dissolve the Lok Sabha.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">How does voting process work in India ?</h5>
+                <div class="content">
+                    India follows a multi-party system with a parliamentary form of democracy. Elections are conducted by the independent Election Commission of India.
+                    Eligibility: Citizens aged 18 and above can vote.
+                    Voter ID: A unique voter ID card is issued to each eligible voter.
+                    Polling Booths: Voting takes place at designated polling booths across the country.
+                    Voting Process:
+                     * Verification: Voters present their ID card at the polling booth.
+                     * Ink Mark: A unique indelible ink mark is applied to the voter's finger to prevent multiple voting.
+                     * Ballot Paper/EVM: Voters receive a ballot paper or cast their vote on an Electronic Voting Machine (EVM).
+                     * Secret Ballot: Voting is conducted in secret to ensure free and fair elections.
+                     * Counting of Votes: After the polls close, votes are counted, and the results are declared.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What is NOTA ?</h5>
+                <div class="content">
+                    NOTA stands for "None Of The Above." It is a voting option introduced in Indian elections to allow voters to express their dissatisfaction with all the candidates contesting in an election. By choosing NOTA, voters can indicate that they do not find any of the candidates suitable for the position.
+                    While NOTA votes are counted, they are not considered valid votes and do not affect the election outcome. However, they serve as a significant tool for voters to voice their disapproval and hold political parties accountable.
+                    The introduction of NOTA has been seen as a step towards empowering voters and enhancing democratic processes in India.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What is article 370 ?</h5>
+                <div class="content">
+                    Article 370 was a provision in the Indian Constitution that granted special autonomous status to the state of Jammu and Kashmir. It allowed the state to have its own constitution, flag, and autonomy in internal administration. This provision limited the applicability of the Indian Constitution to the state and restricted the jurisdiction of the Indian Parliament over the state.
+                    However, on August 5, 2019, the Indian government revoked Article 370 and Article 35A, which was linked to it. This decision aimed to integrate Jammu and Kashmir more fully into the Indian Union and promote economic development and security in the region.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are key policies of current government ?</h5>
+                <div class="content">
+                    The current Indian government has implemented several key policies:
+Economic Reforms:
+ * Demonetization: Aimed to curb black money and counterfeit currency.
+ * Goods and Services Tax (GST): Unified indirect tax system to streamline taxation.
+ * Make in India: Encourages domestic manufacturing and investment.
+ * Digital India: Promotes digital literacy and e-governance.
+Social Welfare:
+ * Pradhan Mantri Jan Dhan Yojana: Financial inclusion for the poor.
+ * Ayushman Bharat: Health insurance scheme for the underprivileged.
+ * Pradhan Mantri Awas Yojana: Affordable housing for all.
+Infrastructure Development:
+ * Bharatmala Pariyojana: Road construction and improvement.
+ * Sagarmala Project: Port modernization and coastal development.
+ * Digital India: Digital infrastructure and e-governance.
+Foreign Policy:
+ * Act East Policy: Strengthening ties with Southeast Asia.
+ * Neighborhood First Policy: Prioritizing relations with neighboring countries.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle read more/read less functionality
+            $('.readMoreBtn').click(function () {
+                const content = $(this).siblings('.content');
+                if (content.hasClass('expanded')) {
+                    content.removeClass('expanded');
+                    $(this).text('Read More');
+                } else {
+                    content.addClass('expanded');
+                    $(this).text('Read Less');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

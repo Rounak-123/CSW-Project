@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More with Multiple Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .content {
+            overflow: hidden;
+            height: 60px; /* Limit the height */
+            transition: height 0.3s ease;
+        }
+        .content.expanded {
+            height: auto; /* Full content when expanded */
+        }
+    </style>
+</head>
+<body >
+    <div style="background-color: rgb(4, 41, 53);">
+        <h2 style=" color: white ; text-align: center;">Joint Entrance Exam</h2>
+    
+        
+      </div>
+    <div class="container mt-4">
+        
+
+        <!-- Repeated Content Sections -->
+        <div class="card mb-4" style="background-color: gray;">
+            <div class="card-body">
+                <h5 class="card-title">What is JEE ?</h5>
+                <div class="content">
+                    The JEE (Joint Entrance Examination) is a highly competitive engineering entrance exam conducted in India. It is used for admission to undergraduate engineering programs in prestigious institutions such as the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), and other top engineering colleges.
+                </div>
+                <button class="readMoreBtn btn btn-secondary mt-3">Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" style="background-color: gray;">
+            <div class="card-body">
+                <h5 class="card-title">What are types of JEE ?</h5>
+                <div class="content">
+                    1.	JEE Main:
+                    •	Conducted by the National Testing Agency (NTA).
+                    •	Serves as a qualifying exam for JEE Advanced.
+                    •	Admission to NITs, IIITs, and other centrally funded technical institutions is based on JEE Main scores.
+                    2.	JEE Advanced:
+                    •	Conducted by one of the IITs on a rotational basis.
+                    •	For admission to IITs and a few other elite institutions.
+                    •	Only students who qualify in JEE Main and meet the cutoff criteria are eligible to appear.
+                </div>
+                <button class="readMoreBtn btn btn-secondary mt-3">Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" style="background-color: gray;">
+            <div class="card-body">
+                <h5 class="card-title">What is the structure of exam ?</h5>
+                <div class="content">
+                    JEE Main:
+
+	•	Subjects: Physics, Chemistry, and Mathematics.
+	•	Mode: Online (Computer-Based Test).
+	•	Papers:
+	•	Paper 1: For B.E./B.Tech programs.
+	•	Paper 2: For B.Arch and B.Planning.
+
+JEE Advanced:
+
+	•	Subjects: Physics, Chemistry, and Mathematics.
+	•	Mode: Online (Computer-Based Test).
+	•	Papers: Two compulsory papers, each testing in-depth concepts and problem-solving skills.
+                </div>
+                <button class="readMoreBtn btn btn-secondary mt-3">Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" style="background-color: gray ;">
+            <div class="card-body">
+                <h5 class="card-title">Discuss importance of JEE ?</h5>
+                <div class="content">
+                    The Joint Entrance Examination (JEE) is India's most prestigious engineering entrance exam. It serves as a gateway to top-tier institutions like IITs and NITs, known for their rigorous academics and global recognition. Cracking JEE not only opens doors to lucrative career opportunities but also fosters critical thinking, problem-solving, and time management skills. It's a challenging yet rewarding journey that shapes future engineers and innovators.
+                </div>
+                <button class="readMoreBtn btn btn-secondary mt-3">Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" style="background-color: gray;">
+            <div class="card-body">
+                <h5 class="card-title">What is the difficulty level of JEE ?</h5>
+                <div class="content">
+                    The JEE is widely considered one of the most challenging engineering entrance exams in the world. Its difficulty level is high due to:
+ * Conceptual Understanding: Requires a deep understanding of fundamental concepts in Physics, Chemistry, and Mathematics.
+ * Problem-Solving Skills: Demands the ability to apply concepts to solve complex and often unconventional problems.
+ * Time Management: The exam has a strict time limit, forcing candidates to work efficiently and accurately under pressure.
+ * Intense Competition: A large number of highly talented students compete for limited seats, making it a highly competitive exam.
+However, the difficulty level can vary between different years and sessions. Some years might have easier papers, while others might be more challenging.
+                </div>
+                <button class="readMoreBtn btn btn-secondary mt-3">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle read more/read less functionality
+            $('.readMoreBtn').click(function () {
+                const content = $(this).siblings('.content');
+                if (content.hasClass('expanded')) {
+                    content.removeClass('expanded');
+                    $(this).text('Read More');
+                } else {
+                    content.addClass('expanded');
+                    $(this).text('Read Less');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

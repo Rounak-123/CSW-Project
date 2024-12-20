@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More with Multiple Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .content {
+            overflow: hidden;
+            height: 60px; /* Limit the height */
+            transition: height 0.3s ease;
+        }
+        .content.expanded {
+            height: auto; /* Full content when expanded */
+        }
+    </style>
+</head>
+<body >
+    <div style="background-color: rgb(4, 41, 53);">
+        <h2 style=" color: white ; text-align: center;">Pollution</h2>
+    
+        
+      </div>
+    <div class="container mt-4">
+      
+
+        <!-- Repeated Content Sections -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">How can cities reduce air and noice pollution ?</h5>
+                <div class="content">
+                    Cities can significantly reduce air and noise pollution through a combination of strategies. Promoting public transportation and cycling infrastructure can decrease reliance on personal vehicles, leading to fewer emissions and lower noise levels. Investing in renewable energy sources like solar and wind power can reduce reliance on fossil fuels, improving air quality. Encouraging energy-efficient buildings and appliances can lower energy consumption and associated emissions. Additionally, implementing stricter noise regulations for construction and industrial activities can help mitigate noise pollution. Urban green spaces, such as parks and tree-lined streets, can absorb pollutants and create quieter environments. By adopting these measures, cities can create healthier and more sustainable urban environments.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are majour source of pollution today ?</h5>
+                <div class="content">
+                    Major sources of pollution today include:
+                    * Fossil Fuel Combustion: Burning coal, oil, and gas for electricity generation and transportation releases harmful gases like carbon dioxide, sulfur dioxide, and nitrogen oxides.
+                    * Industrial Activities: Manufacturing processes, particularly those involving chemicals and heavy metals, release pollutants into the air, water, and soil.
+                    * Deforestation: Clearing forests for agriculture, logging, and urbanization disrupts ecosystems, reduces carbon sinks, and contributes to soil erosion and water pollution.
+                    * Agricultural Practices: Excessive use of fertilizers, pesticides, and unsustainable farming methods pollute water bodies and release greenhouse gases.
+                    * Waste Management: Improper disposal of solid waste and inadequate treatment of wastewater lead to pollution of land, water, and air.
+                    * Transportation: Vehicle emissions, especially from diesel and gasoline-powered vehicles, contribute significantly to air pollution and climate change.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What sre different types of pollution ?</h5>
+                <div class="content">
+                    There are several types of pollution:
+ * Air Pollution: Contamination of the air with harmful substances like gases, particulates, and chemicals.
+ * Water Pollution: Contamination of water bodies, including rivers, lakes, and oceans, with pollutants like chemicals, sewage, and industrial waste.
+ * Land Pollution: Contamination of land with solid or liquid waste, leading to soil degradation and loss of fertility.
+ * Noise Pollution: Excessive noise levels that can cause hearing loss, stress, and other health problems.
+ * Light Pollution: Excessive or misdirected artificial light, which can disrupt natural rhythms, harm wildlife, and reduce visibility of celestial objects.
+ * Thermal Pollution: Release of heated water into water bodies, which can harm aquatic life and disrupt ecosystems.
+ * Radioactive Pollution: Contamination of the environment with radioactive substances, which can have long-lasting health effects.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">How to reduce pollution ?</h5>
+                <div class="content">
+                    How to Reduce Pollution
+ * Reduce, Reuse, Recycle: Minimize waste.
+ * Conserve Energy: Turn off lights, use energy-efficient devices.
+ * Sustainable Transport: Walk, bike, or use public transport.
+ * Conserve Water: Fix leaks, take shorter showers.
+ * Buy Sustainable: Choose eco-friendly products.
+ * Support Renewable Energy: Encourage clean energy sources.
+ * Sustainable Urban Planning: Design eco-friendly cities.
+ * Strict Environmental Regulations: Enforce pollution control laws.
+ * Educate and Raise Awareness: Promote environmental consciousness.
+ * Support Environmental Organizations: Contribute to their efforts.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+       
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle read more/read less functionality
+            $('.readMoreBtn').click(function () {
+                const content = $(this).siblings('.content');
+                if (content.hasClass('expanded')) {
+                    content.removeClass('expanded');
+                    $(this).text('Read More');
+                } else {
+                    content.addClass('expanded');
+                    $(this).text('Read Less');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

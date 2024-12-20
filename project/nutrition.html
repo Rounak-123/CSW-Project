@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More with Multiple Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .content {
+            overflow: hidden;
+            height: 60px; /* Limit the height */
+            transition: height 0.3s ease;
+        }
+        .content.expanded {
+            height: auto; /* Full content when expanded */
+        }
+    </style>
+</head>
+<body >
+    <div style="background-color: rgb(4, 41, 53);">
+        <h2 style=" color: white ; text-align: center;">Nutrition and Health</h2>
+    
+        
+      </div>
+    <div class="container mt-4">
+        
+
+        <!-- Repeated Content Sections -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What is a balance diet ?</h5>
+                <div class="content">
+                    A balanced diet is a diet that contains all the essential nutrients in the right proportions to maintain good health. It includes a variety of foods from all food groups, such as fruits, vegetables, grains, protein foods, and dairy. A balanced diet helps to maintain a healthy weight, reduce the risk of chronic diseases, and improve overall health and well-being.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are signs of vitamin deficiency ?</h5>
+                <div class="content">
+                    Vitamin deficiencies can manifest in various ways, often affecting multiple systems. Common general signs include fatigue, weakness, hair loss, poor wound healing, and frequent infections.
+Specific deficiencies can have unique symptoms:
+ * Vitamin A: Night blindness, dry skin, frequent infections
+ * Vitamin B1 (Thiamine): Beriberi (nerve damage, heart problems)
+ * Vitamin B2 (Riboflavin): Sore throat, mouth sores, skin problems
+ * Vitamin B3 (Niacin): Pellagra (skin rash, diarrhea, dementia)
+ * Vitamin B6: Anemia, nerve problems, skin rashes
+ * Vitamin B12: Anemia, nerve damage, fatigue
+ * Vitamin C: Scurvy (bleeding gums, loose teeth, poor wound healing)
+ * Vitamin D: Weak bones, muscle weakness, fatigue
+ * Vitamin E: Nerve damage, muscle weakness
+If you suspect a vitamin deficiency, consult a healthcare professional for proper diagnosis and treatment.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What foods help prevent heart diesease ?</h5>
+                <div class="content">
+                    A heart-healthy diet is vital for preventing cardiovascular diseases. Prioritize fruits, vegetables, and whole grains, which are rich in antioxidants and fiber. Opt for lean protein sources like fish, poultry, beans, and lentils to reduce saturated fat intake. Include healthy fats like those found in olive oil, avocados, nuts, and seeds. Low-fat dairy products can also contribute to heart health.
+Remember, moderation is key. Limit intake of processed foods, sugary drinks, and excessive sodium. Regular physical activity, combined with a balanced diet, can significantly reduce the risk of heart disease. Consult a healthcare professional for personalized dietary advice.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What should I eat before workout ?</h5>
+                <div class="content">
+                    Fueling your body before a workout is crucial for optimal performance and energy levels. Aim to eat a balanced meal or snack 1-2 hours before your exercise session.
+Ideal Pre-Workout Foods:
+ * Carbohydrates: Provide sustained energy. Opt for complex carbs like whole-grain toast, oatmeal, or fruits (bananas, berries).
+ * Protein: Aids muscle recovery and growth. Good choices include Greek yogurt, eggs, or a protein shake.
+ * Healthy Fats: Offer a slow release of energy. Include sources like nuts, seeds, or avocado.
+Timing is Key:
+ * Light Snack (30-60 minutes before): A banana, a handful of nuts, or a yogurt parfait.
+ * Moderate Meal (1-2 hours before): Whole-grain toast with peanut butter, oatmeal with berries, or a lean protein with vegetables.
+Hydration Matters:
+ * Drink plenty of water throughout the day and sip on water before your workout.
+ * Avoid excessive fluid intake right before exercise to prevent discomfort.
+Remember, individual needs may vary. Experiment with different pre-workout options to find what works best for you.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">Are energy drinks good for health?</h5>
+                <div class="content">
+                    Energy drinks are not generally considered healthy due to their high caffeine and sugar content. While they may provide a temporary energy boost, excessive consumption can lead to several health issues:
+Negative Effects:
+ * Heart Problems: Increased heart rate and blood pressure, potentially leading to heart rhythm disturbances.
+ * Anxiety and Sleep Disruptions: High caffeine levels can cause anxiety, restlessness, and difficulty sleeping.
+ * Digestive Issues: Can irritate the stomach lining, leading to discomfort and acid reflux.
+ * Dehydration: High sugar content can dehydrate the body, especially when consumed in large amounts.
+ * Addiction: Regular consumption can lead to caffeine dependence and withdrawal symptoms.
+It's important to limit energy drink intake and opt for healthier ways to boost energy, such as a balanced diet, adequate sleep, and regular physical activity. If you need a quick energy boost, consider natural options like coffee or tea in moderation.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle read more/read less functionality
+            $('.readMoreBtn').click(function () {
+                const content = $(this).siblings('.content');
+                if (content.hasClass('expanded')) {
+                    content.removeClass('expanded');
+                    $(this).text('Read More');
+                } else {
+                    content.addClass('expanded');
+                    $(this).text('Read Less');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More with Multiple Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .content {
+            overflow: hidden;
+            height: 60px; /* Limit the height */
+            transition: height 0.3s ease;
+        }
+        .content.expanded {
+            height: auto; /* Full content when expanded */
+        }
+    </style>
+</head>
+<body >
+    <div style="background-color: rgb(4, 41, 53);">
+        <h2 style=" color: white ; text-align: center;">Cricket</h2>
+    
+        
+      </div>
+    <div class="container mt-4">
+        
+
+        <!-- Repeated Content Sections -->
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are the basic rules of cricket ?</h5>
+                <div class="content">
+                    Cricket is played between two teams of 11 players. Each team bats and bowls once in a single innings. The batting team scores runs by hitting the ball bowled by the opposing team and running between the wickets. The fielding team tries to get the batters out by catching the ball, bowling them out, or running them out. The team with the most runs at the end of the innings wins.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are different formats of cricket?</h5>
+                <div class="content">
+                    Cricket boasts three primary formats:
+ * Test Cricket: The traditional format, spanning up to five days. Each team bats twice, aiming for the highest combined score. It's a test of endurance, technique, and temperament.
+ * One Day Internationals (ODIs): A limited-overs format where each team bats for 50 overs. It's a faster-paced game emphasizing skill, speed, and strategic batting and bowling.
+ * Twenty20 (T20): The shortest format, with each team batting for just 20 overs. It's known for its explosive nature, big hits, and high-scoring matches. It's the most popular format for attracting new fans to the sport.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">Who are current top players in cricket ?</h5>
+                <div class="content">
+                    Here are some of the top cricket players currently dominating the sport:
+                    Test Cricket:
+                     * Babar Azam (Pakistan): A modern-day batting maestro, known for his elegant technique and consistency.
+                     * Rohit Sharma (India): A prolific run-scorer in all formats, especially in limited-overs cricket.
+                     * Virat Kohli (India): A batting legend with a phenomenal record across all formats.
+                     * Kane Williamson (New Zealand): A calm and composed captain, known for his tactical acumen and batting prowess.
+                     * Steve Smith (Australia): A master batsman with an unorthodox technique and a knack for scoring big runs.
+                    ODI Cricket:
+                     * Babar Azam (Pakistan): The top-ranked ODI batsman, renowned for his consistency and ability to score runs across all conditions.
+                     * Rohit Sharma (India): A limited-overs specialist, particularly in ODIs, known for his explosive batting.
+                     * Virat Kohli (India): A consistent performer in ODI cricket, often delivering match-winning performances.
+                     * Kane Williamson (New Zealand): A reliable batsman and captain, capable of anchoring the innings and scoring quick runs.
+                     * Rassie van der Dussen (South Africa): A classy batsman, known for his elegant strokeplay and ability to play under pressure.
+                    T20 Cricket:
+                     * Suryakumar Yadav (India): A modern-day batting sensation, known for his innovative shots and ability to score runs quickly.
+                     * Jos Buttler (England): An explosive batsman and wicket-keeper, capable of dominating bowling attacks.
+                     * Babar Azam (Pakistan): A consistent performer in T20 cricket, known for his ability to anchor the innings and score quick runs.
+                     * Mohammad Rizwan (Pakistan): A reliable wicket-keeper batsman, known for his calm and composed batting.
+                     * Glenn Maxwell (Australia): A big-hitting all-rounder, capable of changing the course of a game with his explosive batting and bowling.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What is the difference between no  ball and wide ball?</h5>
+                <div class="content">
+                    No-ball and wide ball are two types of illegal deliveries in cricket.
+                    * No-ball: Occurs when the bowler oversteps the crease while delivering the ball. The batting team gets an extra run and the batsman cannot be dismissed on that delivery except for a run-out.
+                    * Wide ball: Occurs when the ball is too wide for the batsman to reach with a normal cricket shot. The batting team gets an extra run but the batsman cannot be dismissed on that delivery.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+
+        <div class="card mb-4" >
+            <div class="card-body">
+                <h5 class="card-title">What are roles of DRS ?</h5>
+                <div class="content">
+                    The Decision Review System (DRS) in cricket is a technology-based system that helps umpires make accurate decisions. It allows players to challenge on-field decisions, such as LBW or caught dismissals. The DRS uses various technologies like:
+ * UltraEdge: Detects faint sounds of the ball hitting the bat.
+ * Hotspot: Detects heat signatures on the bat from the ball's impact.
+ * Ball-tracking technology: Tracks the ball's trajectory to determine if it would have hit the stumps.
+The third umpire reviews the replays and makes a final decision, ensuring fair play and minimizing errors.
+                </div>
+                <button  class=" readMoreBtn btn"style="background-color: rgb(14, 80, 167); color:white;" >Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle read more/read less functionality
+            $('.readMoreBtn').click(function () {
+                const content = $(this).siblings('.content');
+                if (content.hasClass('expanded')) {
+                    content.removeClass('expanded');
+                    $(this).text('Read More');
+                } else {
+                    content.addClass('expanded');
+                    $(this).text('Read Less');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
